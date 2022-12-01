@@ -7,15 +7,16 @@ const Sidebar = () => {
     <SidebarWrapper>
       <Link>
         <Logo />
-        {navLinks.map((link, idx) => {
-          const { name, path } = link
-          return (
-            <NavLink key={idx} to={path}>
-              {name}
-            </NavLink>
-          )
-        })}
+        <h1>Legend Trainer</h1>
       </Link>
+      {navLinks.map((link, idx) => {
+        const { name, path } = link
+        return (
+          <NavLink key={idx} to={path}>
+            {name}
+          </NavLink>
+        )
+      })}
     </SidebarWrapper>
   )
 }
