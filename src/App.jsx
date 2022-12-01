@@ -1,13 +1,18 @@
+import React from "react"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import SharedLayout from "./components/SharedLayout"
+import { Main, Payment, Login, Purchase } from "./routes/index"
 
-import { useState } from 'react'
-import './App.css'
-
-function App() {
-
+const App = () => {
   return (
-    <div className="App">
-
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Main />} />
+          <Route path="payment" element={<Payment />} />
+        </Route>
+      </Routes>
+    </Router>
   )
 }
 
