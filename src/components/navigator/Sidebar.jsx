@@ -11,9 +11,7 @@ const Sidebar = () => {
 
   return (
     <SidebarWrapper
-      onClick={(e) => {
-        dispatch(hideSidebar())
-      }}
+
     >
       <div className="inner-sidebar">
         <button

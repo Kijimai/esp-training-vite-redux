@@ -21,7 +21,17 @@ const Navigator = () => {
             const { name, path } = link
             return (
               <li>
-                <NavLink key={idx} to={path}>
+                <NavLink
+                  style={({ isActive }) => {
+                    return {
+                      color: isActive
+                        ? "hsl(var(--clr-orange))"
+                        : "hsl(var(--clr-white))",
+                    }
+                  }}
+                  key={idx}
+                  to={path}
+                >
                   {name}
                 </NavLink>
               </li>
@@ -66,8 +76,11 @@ const NavWrapper = styled.header`
       gap: 2rem;
 
       a {
-        color: hsl(var(--clr-white));
         font-size: 2rem;
+
+        &:hover {
+          color: hsl(var(--clr-lightblue)) !important;
+        }
       }
     }
   }

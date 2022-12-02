@@ -1,6 +1,9 @@
 :root {
   --clr-black: 0 0% 0%;
   --clr-white: 0 0% 100%;
+
+  --clr-orange: 34 89% 55%;
+  --clr-lightblue: 192 79% 58%;
 }
 
 html {
@@ -67,4 +70,36 @@ button {
 main {
   max-width: 73%;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  main {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    max-width: 90%;
+  }
+}
+
+.btn {
+  display: inline-block;
+  margin: 2rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Jura", "Open Sans", sans-serif;
+  border: none;
+  /* border-radius: 0.6rem; */
+  text-decoration: none;
+  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-lightblue));
+  padding: 0.8rem 1.5rem;
+  transition: 0.3s ease background-color, 0.3s ease color;
+}
+
+.btn:hover {
+  color: hsl(var(--clr-black));
+  background-color: hsl(var(--clr-orange));
 }
