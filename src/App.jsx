@@ -2,8 +2,12 @@ import React from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import SharedLayout from "./components/SharedLayout"
 import { Main, Payment, Login, Purchase } from "./routes/index"
+import Sidebar from "./components/navigator/Sidebar"
+import { useSelector } from "react-redux"
 
 const App = () => {
+  const { isShowing } = useSelector((state) => state.sidebar)
+
   return (
     <Router>
       <Routes>
@@ -12,6 +16,7 @@ const App = () => {
           <Route path="payment" element={<Payment />} />
         </Route>
       </Routes>
+      {isShowing && <Sidebar />}
     </Router>
   )
 }

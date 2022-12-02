@@ -1,6 +1,12 @@
+:root {
+  --clr-black: 0 0% 0%;
+  --clr-white: 0 0% 100%;
+}
+
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -25,6 +31,7 @@ code {
 
 html {
   height: 100%;
+  font-size: 62.5%; /* 10px */
 }
 
 html,
@@ -51,4 +58,13 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+  max-width: 73%;
+  margin: 0 auto;
 }

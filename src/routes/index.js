@@ -5,5 +5,15 @@ import PrivateRoute from "./PrivateRoute"
 import Purchase from "./Purchase"
 import Payment from "./Payment"
 import Services from "./Services"
+import Dashboard from "./Dashboard"
 
-export { Login, Main, Content, PrivateRoute, Purchase, Payment, Services }
+export {
+  Login,
+  Main,
+  Content,
+  PrivateRoute,
+  Purchase,
+  Payment,
+  Services,
+  Dashboard,
+}
