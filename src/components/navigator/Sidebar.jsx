@@ -48,6 +48,12 @@ const Sidebar = () => {
                 </li>
               )
             })}
+            <li>
+              <NavLink>Login</NavLink>
+            </li>
+            <li>
+              <NavLink>Logout</NavLink>
+            </li>
           </ul>
         </nav>
       </div>
