@@ -42,7 +42,7 @@ body {
   position: relative;
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.5) 80%,
+      rgba(0, 0, 0, 0.8) 80%,
       rgba(0, 0, 0)
     ),
     url("../src/assets//images/apexBG-lg.jpg");
@@ -102,4 +102,8 @@ main {
 .btn:hover {
   color: hsl(var(--clr-black));
   background-color: hsl(var(--clr-orange));
+}
+
+ul {
+  list-style: none;
 }

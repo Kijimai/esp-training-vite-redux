@@ -72,7 +72,6 @@ const NavWrapper = styled.header`
 
     .nav-links {
       display: flex;
-      list-style: none;
       gap: 2rem;
 
       a {

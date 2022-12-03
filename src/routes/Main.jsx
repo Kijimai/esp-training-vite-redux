@@ -66,7 +66,7 @@ const MainWrapper = styled.section`
       .hero-img {
         display: block;
         width: 100%;
-        filter: drop-shadow(5rem, 3rem, 1rem, hsl(var(--clr-black)));
+        filter: drop-shadow(0.5rem 0.6rem 0.1rem #4444dd);
       }
     }
   }
@@ -81,7 +81,6 @@ const MainWrapper = styled.section`
       }
 
       .right {
-        
       }
     }
   }
