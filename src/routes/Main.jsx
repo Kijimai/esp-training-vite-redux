@@ -28,12 +28,51 @@ const Main = () => {
             />
           </div>
         </header>
-        <section></section>
-        {/* About Section */}
-        {/* End of About Section */}
-
         {/* Checklist of available services -- Pending */}
+        <section>
+          <h2>Our Coaches</h2>
+          <ul>
+            <li>1000+ hours of Apex Legends playtime</li>
+            <li>Experience participating in ALGS and various tournaments</li>
+            <li></li>
+          </ul>
+        </section>
         {/* End of Checklist */}
+        {/* About Section */}
+        <section>
+          <h2>About Us</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+            pariatur consectetur ad id architecto repudiandae optio nulla,
+            adipisci, accusamus, possimus ab laborum a omnis maxime magnam
+            numquam quod. Aliquid voluptas omnis repellendus laborum minus
+            minima illo ad blanditiis? Error illo molestias accusantium
+            perspiciatis corrupti ratione distinctio velit consectetur suscipit
+            cupiditate?
+          </p>
+        </section>
+        {/* End of About Section */}
+        {/* What is offered and taught */}
+        <section>
+          <h2>What we teach</h2>
+          <div className="teaching-container">
+            <ul>
+              <li>Movement techniques</li>
+              <li>Aim Training and Recoil Control</li>
+              <li>Positioning</li>
+              <li>Ring Prediction</li>
+              <li>Team composition</li>
+            </ul>
+          </div>
+        </section>
+        {/* End of Services offered */}
+
+        {/* Testimonials Section Start */}
+        <section>
+          <h2>What legends have said about us</h2>
+          {/* Carousel here? */}
+        </section>
+        {/* Testimonials End */}
       </MainWrapper>
     </>
   )

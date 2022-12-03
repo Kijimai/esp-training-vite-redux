@@ -121,7 +121,7 @@ const SidebarWrapper = styled.aside`
             justify-content: flex-start;
             text-align: left;
             padding: 0 2rem;
-            gap: 1rem;
+            gap: 3rem;
             font-size: 3rem;
             color: hsl(var(--clr-white));
             transition: 0.2s ease color;

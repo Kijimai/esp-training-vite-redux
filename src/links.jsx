@@ -1,5 +1,4 @@
-import Home from "./assets/icons/Home"
-import Services from "./assets/icons/Services"
+import { Home, Services, Payment, Team } from "./assets/icons/AllIcons"
 
 export const navLinks = [
   { name: "Home", path: "/", icon: <Home className="icon" /> },
@@ -9,11 +8,13 @@ export const navLinks = [
     icon: <Services className="icon" />,
   },
   {
-    name: "Sample",
-    path: "/sample",
+    name: "Our Team",
+    path: "/team",
+    icon: <Team className="icon" />,
   },
   {
-    name: "Sample",
-    path: "/sample",
+    name: "Purchase",
+    path: "/purchase",
+    icon: <Payment className="icon" />,
   },
 ]

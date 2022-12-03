@@ -1,8 +1,11 @@
-import React from 'react'
+import React from "react"
 
 const Payment = () => {
   return (
-    <div>Payment</div>
+    <div>
+      {/* Payment Section */}
+      {/* This is where stripe functionality will be */}
+    </div>
   )
 }
 

@@ -6,6 +6,7 @@ import Purchase from "./Purchase"
 import Payment from "./Payment"
 import Services from "./Services"
 import Dashboard from "./Dashboard"
+import Team from "./Team"
 
 export {
   Login,
@@ -16,4 +17,5 @@ export {
   Payment,
   Services,
   Dashboard,
+  Team
 }

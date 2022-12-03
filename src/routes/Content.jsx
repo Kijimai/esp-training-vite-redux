@@ -1,10 +1,13 @@
 // Page for Lesson content
 
-import React from 'react'
+import React from "react"
 
 const Content = () => {
   return (
-    <div>Content</div>
+    <div>
+      {/*Random user API */}
+      {/* Aimlabs */}
+    </div>
   )
 }
 
