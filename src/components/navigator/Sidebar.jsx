@@ -5,6 +5,8 @@ import { Link, NavLink } from "react-router-dom"
 import { navLinks } from "../../links"
 import { useDispatch } from "react-redux"
 import { hideSidebar } from "../../features/sidebar/sidebarSlice"
+import Login from "../../assets/icons/Login"
+import Logout from "../../assets/icons/Logout"
 
 const Sidebar = () => {
   const dispatch = useDispatch()
@@ -49,10 +51,24 @@ const Sidebar = () => {
               )
             })}
             <li>
-              <NavLink>Login</NavLink>
+              <NavLink
+                onClick={() => {
+                  dispatch(hideSidebar())
+                }}
+              >
+                <Login className="icon" />
+                Login
+              </NavLink>
             </li>
             <li>
-              <NavLink>Logout</NavLink>
+              <NavLink
+                onClick={() => {
+                  dispatch(hideSidebar())
+                }}
+              >
+                <Logout className="icon" />
+                Logout
+              </NavLink>
             </li>
           </ul>
         </nav>
