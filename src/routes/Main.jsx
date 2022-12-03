@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 import ctaImg from "../assets/images/cta-png.png"
+import { teachings } from "../links"
+
 const Main = () => {
   return (
     <>
@@ -58,15 +60,19 @@ const Main = () => {
         {/* What is offered and taught */}
         <section>
           <h2>What we teach</h2>
-          <div className="teaching-container">
-            <ul>
-              <li>Movement techniques</li>
-              <li>Aim Training and Recoil Control</li>
-              <li>Positioning</li>
-              <li>Ring Prediction</li>
-              <li>Team composition</li>
-            </ul>
-          </div>
+          <aside className="teaching-container">
+            {teachings.map((item, idx) => {
+              const { text, content, icon } = item
+
+              return (
+                <div className="single-teaching">
+                  {icon}
+                  <p>{text}</p>
+                  <p>{content}</p>
+                </div>
+              )
+            })}
+          </aside>
         </section>
         {/* End of Services offered */}
 

@@ -29,27 +29,32 @@ export const navLinks = [
 export const teachings = [
   {
     text: "Movement techniques",
-    content: "",
+    content:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam illo laudantium minus neque, ea, officia minima iusto possimus deleniti aperiam nostrum fuga a iure eaque.",
     icon: <FaRunning />,
   },
   {
     text: "Aim training and Recoil Control",
-    content: "",
+    content:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam illo laudantium minus neque, ea, officia minima iusto possimus deleniti aperiam nostrum fuga a iure eaque.",
     icon: <FaCrosshairs />,
   },
   {
     text: "Positioning",
-    content: "",
+    content:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam illo laudantium minus neque, ea, officia minima iusto possimus deleniti aperiam nostrum fuga a iure eaque.",
     icon: <FaArrowsAlt />,
   },
   {
     text: "Ring Prediction",
-    content: "",
+    content:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam illo laudantium minus neque, ea, officia minima iusto possimus deleniti aperiam nostrum fuga a iure eaque.",
     icon: <FaRing />,
   },
   {
     text: "Team Composition",
-    content: "",
+    content:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam illo laudantium minus neque, ea, officia minima iusto possimus deleniti aperiam nostrum fuga a iure eaque.",
     icon: <FaPeopleCarry />,
   },
 ]
