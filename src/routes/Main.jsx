@@ -32,9 +32,12 @@ const Main = () => {
         <section>
           <h2>Our Coaches</h2>
           <ul>
-            <li>1000+ hours of Apex Legends playtime</li>
+            <li>
+              2000+ hours of Apex Legends playtime and other competitive FPS
+              games
+            </li>
             <li>Experience participating in ALGS and various tournaments</li>
-            <li></li>
+            <li>Customer Satisfaction rating of 4+ stars</li>
           </ul>
         </section>
         {/* End of Checklist */}
