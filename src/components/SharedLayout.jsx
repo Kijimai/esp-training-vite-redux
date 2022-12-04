@@ -4,13 +4,11 @@ import Footer from "./footer/Footer"
 
 const SharedLayout = () => {
   return (
-    <main>
+    <>
       <Navigator />
-      <main>
-        <Outlet />
-      </main>
+      <Outlet />
       <Footer />
-    </main>
+    </>
   )
 }
 

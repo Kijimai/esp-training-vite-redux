@@ -51,6 +51,8 @@ const Navigator = () => {
 }
 
 const NavWrapper = styled.header`
+  max-width: 73%;
+  margin: 0 auto;
   padding: 2rem 0;
   a {
     text-decoration: none;

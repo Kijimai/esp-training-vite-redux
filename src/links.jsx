@@ -58,3 +58,14 @@ export const teachings = [
     icon: <FaPeopleCarry />,
   },
 ]
+
+// Testimonials
+
+export const testimonialsList = [
+  {
+    user: "Name Here",
+    review:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, perferendis amet earum delectus quidem iusto laborum, iste quas voluptatibus dolorum, incidunt quo impedit rem deserunt.",
+    img: "",
+  },
+]
