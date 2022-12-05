@@ -93,15 +93,19 @@ export const purchaseTiers = [
   },
   {
     title: "Deluxe",
-    cost: 12500,
-    offers: [""],
+    cost: 22500,
+    offers: ["2hr daily coaching sessions for 1 week", "VOD Review"],
     bannerColor: "hsl(var(--clr-q-yellow))",
     userType: "deluxe",
   },
   {
     title: "MVP",
     cost: 100000,
-    offers: ["Everything from previous tiers", ""],
+    offers: [
+      "Everything from previous tiers",
+      "1 month of 2hr coaching sessions of any day of your choosing.",
+      "Play together in ranked to get at least Diamond rank and try to reach Masters rank",
+    ],
     bannerColor: "hsl(var(--clr-q-red))",
     userType: "mvp",
   },
