@@ -20,7 +20,7 @@ const Navigator = () => {
           {navLinks.map((link, idx) => {
             const { name, path } = link
             return (
-              <li>
+              <li key={idx}>
                 <NavLink
                   style={({ isActive }) => {
                     return {
@@ -29,7 +29,6 @@ const Navigator = () => {
                         : "hsl(var(--clr-white))",
                     }
                   }}
-                  key={idx}
                   to={path}
                 >
                   {name}
