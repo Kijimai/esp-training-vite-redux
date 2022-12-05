@@ -1,8 +1,14 @@
 import styled from "styled-components"
 import { formatPrice } from "../../utils/helper"
 import { FaCheck } from "react-icons/fa"
-const PurchaseCard = ({ title, cost, offers, bannerColor, userType }) => {
-  console.log(bannerColor)
+const PurchaseCard = ({
+  title,
+  cost,
+  offers,
+  bannerColor,
+  userType,
+  purchaseLink,
+}) => {
   return (
     <CardWrapper>
       <header style={{ backgroundColor: bannerColor }}>
@@ -21,7 +27,13 @@ const PurchaseCard = ({ title, cost, offers, bannerColor, userType }) => {
         })}
       </ul>
       <footer>
-        <button>Select</button>
+        <button
+          onClick={() => {
+            window.open(purchaseLink, "_self")
+          }}
+        >
+          Select
+        </button>
       </footer>
     </CardWrapper>
   )
@@ -45,9 +57,8 @@ const CardWrapper = styled.article`
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    letter-spacing: 0.1rem;
     margin: 1rem 0;
 
     li {
