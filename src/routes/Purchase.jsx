@@ -6,6 +6,10 @@ const Purchase = () => {
   return (
     <div>
       {/* Pricing Tiers Section */}
+      <p>
+        Basic to Deluxe tier are on a per purchase basis. The MVP tier is a
+        month long training session of any day of your choosing.
+      </p>
       {/* End of Pricing Tiers Section */}
 
       {/* Testimonials Section */}
