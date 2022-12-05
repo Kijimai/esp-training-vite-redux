@@ -4,6 +4,11 @@
 
   --clr-orange: 34 89% 55%;
   --clr-lightblue: 192 79% 58%;
+
+  --clr-q-blue: #51a8d6;
+  --clr-q-purple: #b237c8;
+  --clr-q-yellow: #cead21;
+  --clr-q-red: #f02f2f;
 }
 
 html {
@@ -48,6 +53,8 @@ body {
     url("../src/assets//images/apexBG-lg.jpg");
   background-position: 35% center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   line-height: 1.5;
   color: #121212;
 }
