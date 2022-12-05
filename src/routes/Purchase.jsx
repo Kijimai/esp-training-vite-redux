@@ -48,9 +48,22 @@ const PurchaseWrapper = styled.main`
 
   .purchase-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(30rem, 1fr));
     grid-template-rows: 1fr 1fr;
     gap: 2rem;
+
+    article:nth-child(1) {
+      grid-column: 1/2;
+    }
+    article:nth-child(2) {
+      grid-column: 2/3;
+    }
+    article:nth-child(3) {
+      grid-column: 3/4;
+    }
+    article:nth-child(4) {
+      grid-column: 2/3;
+    }
   }
 `
 
