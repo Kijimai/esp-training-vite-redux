@@ -80,6 +80,7 @@ export const purchaseTiers = [
     ],
     bannerColor: "hsl(var(--clr-q-blue))",
     userType: "basic",
+    purchaseLink: import.meta.env.VITE_BASIC_LINK
   },
   {
     title: "Pro",
