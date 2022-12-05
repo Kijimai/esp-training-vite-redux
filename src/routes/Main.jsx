@@ -33,15 +33,25 @@ const Main = () => {
         </div>
       </header>
       {/* Checklist of available services -- Pending */}
-      <section>
+      <section className="coaches">
         <h2>Our Coaches</h2>
-        <ul>
-          <li>
-            2000+ hours of Apex Legends playtime and other competitive FPS games
-          </li>
-          <li>Experience participating in ALGS and various tournaments</li>
-          <li>Customer Satisfaction rating of 4+ stars</li>
-        </ul>
+        <div className="inner-coaches">
+          <div className="left">
+            <ul>
+              <li>
+                2000+ hours of Apex Legends playtime and other competitive FPS
+                games
+              </li>
+              <li>Experience participating in ALGS and various tournaments</li>
+              <li>Customer Satisfaction rating of 4+ stars</li>
+            </ul>
+          </div>
+          <div className="right">
+            <Link className="btn" to="team">
+              Our Team
+            </Link>
+          </div>
+        </div>
       </section>
       {/* End of Checklist */}
       {/* About Section */}
