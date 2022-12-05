@@ -1,25 +1,57 @@
 // Page for pricing tiers
-
-import React from "react"
+import styled from "styled-components"
+import PurchaseCard from "../components/purchase/PurchaseCard"
+import { purchaseTiers } from "../links"
 
 const Purchase = () => {
   return (
-    <div>
+    <PurchaseWrapper>
       {/* Pricing Tiers Section */}
-      <p>
-        Basic to Deluxe tier are on a per purchase basis. The MVP tier is a
-        month long training session of any day of your choosing.
-      </p>
-      {/* End of Pricing Tiers Section */}
-
-      {/* Testimonials Section */}
-      {/* End of Testimonials Section */}
-
-      {/* Call to Action Section-- Log in to Purchase */}
-      {/* Visible if not logged in */}
-      {/* End of CTA */}
-    </div>
+      <section className="services">
+        <header>
+          <h2>Our Services</h2>
+          <p>
+            Basic to Deluxe tier are on a per purchase basis. The MVP tier is a
+            month long training session of any day of your choosing.
+          </p>
+        </header>
+        <div className="purchase-cards">
+          {/* If user isnt logged in, redirect to sign up page when purchasing a plan */}
+          {purchaseTiers.map((tier, idx) => {
+            return <PurchaseCard key={idx} {...tier} />
+          })}
+        </div>
+      </section>
+    </PurchaseWrapper>
   )
 }
+
+const PurchaseWrapper = styled.main`
+  .services {
+    header {
+      margin-bottom: 2rem;
+      h2,
+      p {
+        color: hsl(var(--clr-white));
+        text-align: center;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.6rem;
+        max-width: 50rem;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .purchase-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+  }
+`
 
 export default Purchase
