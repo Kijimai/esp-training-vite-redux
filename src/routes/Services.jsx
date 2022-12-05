@@ -1,12 +1,14 @@
-import React from "react"
+import styled from "styled-components"
+
 
 const Services = () => {
   return (
-    <div>
-      Services
-      {/* If user isnt logged in, redirect to sign up page when purchasing a plan */}
-    </div>
+    <ServicesWrapper>
+
+    </ServicesWrapper>
   )
 }
+
+const ServicesWrapper = styled.main``
 
 export default Services
