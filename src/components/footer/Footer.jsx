@@ -47,15 +47,33 @@ const FooterWrapper = styled.footer`
 
     .footer-nav {
       padding: 2rem 0;
+
       .footer-links {
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 1rem;
+
+        li {
+          &:not(:last-child)::after {
+            content: "";
+            display: inline-block;
+            height: 1rem;
+            width: 0.1rem;
+            margin-left: 1rem;
+            background-color: hsl(var(--clr-white));
+          }
+        }
 
         a {
           color: hsl(var(--clr-white));
           font-size: 1.4rem;
           text-decoration: none;
+          transition: 0.2s ease color;
+
+          &:hover {
+            color: hsl(var(--clr-orange));
+          }
         }
       }
     }
