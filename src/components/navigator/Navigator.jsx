@@ -12,7 +12,7 @@ const Navigator = () => {
   return (
     <NavWrapper>
       <nav>
-        <Link to="/">
+        <Link className="site-logo" to="/">
           <Logo />
           <h1>Legend Trainer</h1>
         </Link>
@@ -39,11 +39,12 @@ const Navigator = () => {
           })}
         </ul>
         <button
+          className="nav-open"
           onClick={() => {
             dispatch(showSidebar())
           }}
         >
-          <NavOpen className="nav-open" color="#fff" />
+          <NavOpen color="#fff" />
         </button>
       </nav>
     </NavWrapper>
@@ -54,12 +55,15 @@ const NavWrapper = styled.header`
   max-width: 73%;
   margin: 0 auto;
   padding: 2rem 0;
+
   a {
     text-decoration: none;
   }
+
   nav {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 12rem 1fr 12rem;
+    justify-content: flex-start;
     align-items: center;
 
     button {
@@ -69,11 +73,17 @@ const NavWrapper = styled.header`
 
     h1 {
       color: hsl(var(--clr-white));
-      font-family: "Jura", "Open Sans", sans-serif;
+      font-family: "Jura", "Open Sansu", sans-serif;
+    }
+
+    .site-logo {
+      grid-column: 1 / 2;
     }
 
     .nav-links {
+      grid-column: 2 / 3;
       display: flex;
+      justify-content: center;
       gap: 2rem;
 
       a {
@@ -87,7 +97,40 @@ const NavWrapper = styled.header`
   }
 
   .nav-open {
-    height: 40px;
+    display: none;
+    svg {
+      height: 40px;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    nav {
+      display: flex;
+      justify-content: space-between;
+
+      .site-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        svg {
+          width: 8rem;
+        }
+        h1 {
+          font-size: 1.4rem;
+        }
+      }
+
+      .nav-links {
+        display: none;
+
+        a {
+          font-size: 1.6rem;
+        }
+      }
+      .nav-open {
+        display: block;
+      }
+    }
   }
 `
 
