@@ -69,3 +69,40 @@ export const testimonialsList = [
     img: "",
   },
 ]
+
+export const purchaseTiers = [
+  {
+    title: "Basic",
+    cost: 2500,
+    offers: [
+      "1 hr live coaching session (Find out bad habits, How to improve)",
+      "VOD Review",
+    ],
+    bannerColor: "hsl(var(--clr-q-blue))",
+    userType: "basic",
+  },
+  {
+    title: "Pro",
+    cost: 5000,
+    offers: [
+      "2 days 2.5 hr live coaching session (Find out bad habits, How to improve)",
+      "VOD review",
+    ],
+    bannerColor: "hsl(var(--clr-q-purple))",
+    userType: "pro",
+  },
+  {
+    title: "Deluxe",
+    cost: 12500,
+    offers: [""],
+    bannerColor: "hsl(var(--clr-q-yellow))",
+    userType: "deluxe",
+  },
+  {
+    title: "MVP",
+    cost: 100000,
+    offers: ["Everything from previous tiers", ""],
+    bannerColor: "hsl(var(--clr-q-red))",
+    userType: "mvp",
+  },
+]
