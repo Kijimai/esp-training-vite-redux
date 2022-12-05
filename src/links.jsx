@@ -80,7 +80,7 @@ export const purchaseTiers = [
     ],
     bannerColor: "hsl(var(--clr-q-blue))",
     userType: "basic",
-    purchaseLink: import.meta.env.VITE_BASIC_LINK
+    purchaseLink: import.meta.env.VITE_BASIC_LINK,
   },
   {
     title: "Pro",
@@ -91,6 +91,7 @@ export const purchaseTiers = [
     ],
     bannerColor: "hsl(var(--clr-q-purple))",
     userType: "pro",
+    purchaseLink: import.meta.env.VITE_PRO_LINK,
   },
   {
     title: "Deluxe",
@@ -98,6 +99,7 @@ export const purchaseTiers = [
     offers: ["2hr daily coaching sessions for 1 week", "VOD Review"],
     bannerColor: "hsl(var(--clr-q-yellow))",
     userType: "deluxe",
+    purchaseLink: import.meta.env.VITE_DELUXE_LINK,
   },
   {
     title: "MVP",
@@ -109,5 +111,6 @@ export const purchaseTiers = [
     ],
     bannerColor: "hsl(var(--clr-q-red))",
     userType: "mvp",
+    purchaseLink: import.meta.env.VITE_MVP_LINK,
   },
 ]
