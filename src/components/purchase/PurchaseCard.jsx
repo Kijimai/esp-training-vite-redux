@@ -23,4 +23,12 @@ const PurchaseCard = ({ title, cost, offers, bannerColor, userType }) => {
 
 const CardWrapper = styled.article``
 
+PurchaseCard.defaultProps = {
+  title: "N/A",
+  cost: 0,
+  offers: ["No description available."],
+  bannerColor: "#fff",
+  userType: "N/A",
+}
+
 export default PurchaseCard
