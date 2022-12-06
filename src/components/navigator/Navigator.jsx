@@ -3,12 +3,13 @@ import { NavLink, Link } from "react-router-dom"
 import { navLinks } from "../../links"
 import { useDispatch } from "react-redux"
 import { showSidebar } from "../../features/sidebar/sidebarSlice"
+
+import NavUserControls from "./NavUserControls"
 import NavOpen from "../../assets/icons/NavOpen"
 import Logo from "../../assets/icons/Logo"
 
 const Navigator = () => {
   const dispatch = useDispatch()
-
   return (
     <NavWrapper>
       <nav>
@@ -37,14 +38,17 @@ const Navigator = () => {
             )
           })}
         </ul>
-        <button
-          className="nav-open"
-          onClick={() => {
-            dispatch(showSidebar())
-          }}
-        >
-          <NavOpen color="#fff" />
-        </button>
+        <div className="nav-right">
+          <button
+            className="nav-open"
+            onClick={() => {
+              dispatch(showSidebar())
+            }}
+          >
+            <NavOpen color="#fff" />
+          </button>
+          <NavUserControls />
+        </div>
       </nav>
     </NavWrapper>
   )
