@@ -5,11 +5,15 @@ import { Link, NavLink } from "react-router-dom"
 import { navLinks } from "../../links"
 import { useDispatch } from "react-redux"
 import { hideSidebar } from "../../features/sidebar/sidebarSlice"
+
+import { useUserContext } from "../../context/UserProvider"
+
 import Login from "../../assets/icons/Login"
 import Logout from "../../assets/icons/Logout"
 
 const Sidebar = () => {
   const dispatch = useDispatch()
+  const { user, loginWithRedirect, logout } = useUserContext()
 
   return (
     <SidebarWrapper>
@@ -51,26 +55,37 @@ const Sidebar = () => {
               )
             })}
             <li>
-              <NavLink
-                onClick={() => {
-                  dispatch(hideSidebar())
-                }}
-              >
-                <Login className="icon" />
-                Login
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                onClick={() => {
-                  dispatch(hideSidebar())
-                }}
-              >
-                <Logout className="icon" />
-                Logout
-              </NavLink>
+              {user ? (
+                <button
+                  onClick={() => {
+                    dispatch(hideSidebar())
+                    logout()
+                  }}
+                >
+                  <Logout className="icon" />
+                  Logout
+                </button>
+              ) : (
+                <button
+                  onClick={() => {
+                    dispatch(hideSidebar())
+                    loginWithRedirect()
+                  }}
+                >
+                  <Login className="icon" />
+                  Login
+                </button>
+              )}
             </li>
           </ul>
+          {user && (
+            <div className="user-controls">
+              <h3>Welcome, {user.nickname}</h3>
+              <Link className="btn" to="dashboard">
+                Dashboard
+              </Link>
+            </div>
+          )}
         </nav>
       </div>
     </SidebarWrapper>
@@ -137,7 +152,8 @@ const SidebarWrapper = styled.aside`
         margin-top: 2rem;
 
         li {
-          a {
+          a,
+          button {
             display: flex;
             align-items: center;
             justify-content: flex-start;
@@ -152,10 +168,21 @@ const SidebarWrapper = styled.aside`
           &:hover {
             background-color: hsl(var(--clr-black) / 0.4);
 
-            a {
+            a,
+            button {
               color: hsl(var(--clr-orange));
             }
           }
+        }
+      }
+
+      .user-controls {
+        margin-top: 3rem;
+        color: hsl(var(--clr-white));
+
+        h3 {
+          font-size: 1.6rem;
+          text-transform: capitalize;
         }
       }
 
