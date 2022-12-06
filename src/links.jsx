@@ -6,6 +6,15 @@ import {
   FaArrowsAlt,
   FaCrosshairs,
 } from "react-icons/fa"
+import {
+  coach1,
+  coach2,
+  coach3,
+  coach4,
+  coach5,
+  coach6,
+  coach7,
+} from "./assets/images/images"
 
 export const navLinks = [
   { name: "Home", path: "/", icon: <Home className="icon" /> },
@@ -112,5 +121,91 @@ export const purchaseTiers = [
     bannerColor: "hsl(var(--clr-q-red))",
     userType: "mvp",
     purchaseLink: import.meta.env.VITE_MVP_LINK,
+  },
+]
+
+export const coachInfo = [
+  {
+    id: 1,
+    name: "James 'xXAimbotXx' Brooks",
+    games: [
+      "Apex Legends",
+      "Valorant",
+      "CS: Global Offensive",
+      "Overwatch",
+      "Fortnite",
+      "Super Smash Melee",
+    ],
+    profileImg: coach1,
+    imgAlt: "James 'xXAimbotXx' Brooks",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas in similique aliquid tempora officiis, quam accusamus expedita, ea necessitatibus blanditiis iste eius nam cum voluptatibus minus natus aspernatur reiciendis illum eos perspiciatis assumenda.",
+  },
+  {
+    id: 2,
+    name: "Arnold 'SunTzu' Tang",
+    games: [
+      "Apex Legends",
+      "Valorant",
+      "CS: Global Offensive",
+      "Overwatch",
+      "Dota2",
+      "Tekken 7",
+    ],
+    profileImg: coach2,
+    imgAlt: "Arnold 'SunTzu' Tang",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas in similique aliquid tempora officiis, quam accusamus expedita, ea necessitatibus blanditiis iste eius nam cum voluptatibus minus natus aspernatur reiciendis illum eos perspiciatis assumenda.",
+  },
+  {
+    id: 3,
+    name: "Steve 'DrawinBlanks' Young",
+    games: [
+      "Apex Legends",
+      "Valorant",
+      "CS: Global Offensive",
+      "Team Fortress 2",
+      "Smite",
+    ],
+    profileImg: coach3,
+    imgAlt: "Name 'DrawinBlanks' Here",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas in similique aliquid tempora officiis, quam accusamus expedita, ea necessitatibus blanditiis iste eius nam cum voluptatibus minus natus aspernatur reiciendis illum eos perspiciatis assumenda.",
+  },
+  {
+    id: 4,
+    name: "Si-woo 'NoCap' Kim",
+    games: ["Apex Legends", "League of Legends", "Modern Warfare 2"],
+    profileImg: coach4,
+    imgAlt: "Si-woo 'NoCap' Kim",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas in similique aliquid tempora officiis, quam accusamus expedita, ea necessitatibus blanditiis iste eius nam cum voluptatibus minus natus aspernatur reiciendis illum eos perspiciatis assumenda.",
+  },
+  {
+    id: 5,
+    name: "Daiwik 'KaiserKing' Dhar",
+    games: ["Apex Legends", "Apex Legends Mobile", "Titanfall 2"],
+    profileImg: coach5,
+    imgAlt: "Daiwik 'KaiserKing' Dhar",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas in similique aliquid tempora officiis, quam accusamus expedita, ea necessitatibus blanditiis iste eius nam cum voluptatibus minus natus aspernatur reiciendis illum eos perspiciatis assumenda.",
+  },
+  {
+    id: 6,
+    name: "Geoff 'Nameless_wind' Smith",
+    games: ["Apex Legends", "Rainbow 6", "Modern Warfare 2"],
+    profileImg: coach6,
+    imgAlt: "Geoff 'Nameless_wind' Smith",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas in similique aliquid tempora officiis, quam accusamus expedita, ea necessitatibus blanditiis iste eius nam cum voluptatibus minus natus aspernatur reiciendis illum eos perspiciatis assumenda.",
+  },
+  {
+    id: 7,
+    name: "Günter 'Wünderbar' König",
+    games: ["Apex Legends", "Halo Infinite", "H1Z1"],
+    profileImg: coach7,
+    imgAlt: "Günter 'Wünderbar' König",
+    description:
+      "Gaming was not his original passion. He found his calling after visiting a local internet cafe and witnessing a tournament unfold before his eyes. After witnessing a victory, that was the moment he wanted that shit.",
   },
 ]
