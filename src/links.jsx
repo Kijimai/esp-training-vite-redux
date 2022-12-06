@@ -193,7 +193,7 @@ export const coachInfo = [
   {
     id: 6,
     name: "Geoff 'Nameless_wind' Smith",
-    games: ["Apex Legends", "Rainbow 6", "Modern Warfare 2"],
+    games: ["Apex Legends", "Rainbow 6 Siege", "Modern Warfare 2"],
     profileImg: coach6,
     imgAlt: "Geoff 'Nameless_wind' Smith",
     description:
