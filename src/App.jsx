@@ -18,25 +18,23 @@ import AuthWrapper from "./routes/AuthWrapper"
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 
-const toastOptions = {
-  position: "top-center",
-  autoClose: 5000,
-  hideProgressBar: false,
-  newestOnTop: false,
-  closeOnClick: true,
-  rtl: false,
-  pauseOnFocusLoss: true,
-  draggable: false,
-  pauseOnHover: true,
-  theme: "dark",
-}
-
 const App = () => {
   const { isShowing } = useSelector((state) => state.sidebar)
 
   return (
     <Router>
-      <ToastContainer toastOptions={toastOptions} />
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <AuthWrapper>
         <Routes>
           <Route path="/" element={<SharedLayout />}>
