@@ -6,7 +6,11 @@ const AuthWrapper = ({ children }) => {
   const { isLoading, error } = useAuth0()
 
   if (isLoading) {
-    return <Loading type="cylon" />
+    return (
+      <Wrapper>
+        <Loading type="cylon" />
+      </Wrapper>
+    )
   }
 
   if (error) {
