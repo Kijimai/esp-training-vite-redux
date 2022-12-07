@@ -214,21 +214,21 @@ export const servicesList = [
   {
     title: "Movement Techniques",
     description:
-      "From tap and lurch strafing, to wall bounces, we will teach you how to perform the forbidden techniques of movement so you can dominate any fight while helping you stay alive and hard to hit. We can suggest optimal keybinds to fit your personal playstyle. Everyone knows movement is the secret ingredient to becoming an Apex Predator.",
+      "From tap and lurch strafing, to wall bounces, we will teach you how to perform the forbidden techniques of movement so you can dominate any fight while helping you stay alive and hard to hit. We can suggest optimal keybinds to fit your personal playstyle. Everyone knows movement is the secret ingredient to becoming an <b>Apex Predator</b>.",
     imgLink:
       "https://media4.giphy.com/media/CMm2c7Gqd8UVB5VkCQ/giphy.gif?cid=ecf05e479ep09i6j3yyxm43uaz3joxna7o3uknf03liazurb&rid=giphy.gif&ct=g",
   },
   {
     title: "Aim Training and Recoil Control",
     description:
-      "While movement will keep you alive, learning to aim is where you can make sure your enemies won't be around to put you down. Our goal is to make you the deadliest predator on the battlefield.",
+      "While movement will keep you alive, learning to aim is where you can make sure your enemies won't be around to put you down. Our goal is to make you the <b>deadliest predator</b> on the battlefield.",
     imgLink:
       "https://media2.giphy.com/media/iciWusgKvCka8hIWVE/giphy.gif?cid=ecf05e47qlw4fm0mngajoutim54sts31dpm3g8moadu1zjwj&rid=giphy.gif&ct=g",
   },
   {
     title: "Positioning",
     description:
-      "You, your enemies, and the ring will always be on the move. Knowing where and when to change your position is the key to getting 1st place. We can help you determine the optimal strategy to turn the tide of any fight in your favor.",
+      "You, your enemies, and the ring will always be on the move. Knowing where and when to <b>change your position</b> is the key to getting 1st place. We can help you determine the optimal strategy to turn the tide of any fight in your favor.",
     imgLink:
       "https://media1.giphy.com/media/M68u4NDrK8gogZdcNf/giphy.gif?cid=ecf05e474vauyz8zmrd3kepwtlk0ao5gnzjmz1ddpcq3gr3r&rid=giphy.gif&ct=g",
   },
@@ -242,7 +242,7 @@ export const servicesList = [
   {
     title: "Team Composition",
     description:
-      "You might not currently have the mechanical skills to win you games single-handedly, but playing towards the strengths of your team by choosing the perfect legend to fit your playstyle and team synergy will be one of your greatest asset.",
+      "You might not currently have the mechanical skills to win you games single-handedly, but playing towards the strengths of your team by <b>choosing the perfect legend</b> to fit your playstyle and team synergy will be one of your greatest asset.",
     imgLink:
       "https://media3.giphy.com/media/sNyjG5CwcBACHrCJkm/giphy.gif?cid=ecf05e479ep09i6j3yyxm43uaz3joxna7o3uknf03liazurb&rid=giphy.gif&ct=g",
   },
