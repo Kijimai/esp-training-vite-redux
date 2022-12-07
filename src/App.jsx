@@ -17,6 +17,8 @@ import AuthWrapper from "./routes/AuthWrapper"
 // Toast popup dependencies
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
+// Splide Styling
+import "@splidejs/react-splide/css"
 
 const App = () => {
   const { isShowing } = useSelector((state) => state.sidebar)
