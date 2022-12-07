@@ -91,7 +91,7 @@ const NavWrapper = styled.header`
 
       a {
         font-size: 2rem;
-
+        font-family: "Open Sans", sans-serif;
         &:hover {
           color: hsl(var(--clr-lightblue)) !important;
         }
