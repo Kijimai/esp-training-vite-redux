@@ -57,6 +57,7 @@ body {
   background-size: cover;
   line-height: 1.5;
   color: #121212;
+  font-family: "Open Sans", sans-serif;
 }
 
 .sr-only {
@@ -76,13 +77,19 @@ button {
 }
 
 main {
-  max-width: 73%;
+  max-width: 70%;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 1440px) {
+  main {
+    max-width: 80%;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
   main {
-    max-width: 80%;
+    max-width: 85%;
   }
 }
 
