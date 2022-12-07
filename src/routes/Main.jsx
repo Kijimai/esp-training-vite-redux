@@ -18,7 +18,7 @@ const Main = () => {
           <p>
             Legend trainer is the premiere platform for Apex Legends coaching
             and skill improvement. Our coaches are at the top of their game and
-            ready to pass on their knowledge to the aspiring champions.
+            ready to pass on their knowledge to any aspiring champions.
           </p>
           <Link className="btn" to="services">
             View our Services
