@@ -15,8 +15,15 @@ const splideOptions = {
 const Team = () => {
   return (
     <TeamWrapper>
-      <section>
+      <header>
         <h2>Meet the Team</h2>
+        <p>
+          The best in the business, the best in the game. Our gaming backgrounds
+          are diverse and the skills gained throughout our years of mastery
+          carry over to the games we currently play.
+        </p>
+      </header>
+      <section>
         <Splide options={splideOptions}>
           {coachInfo.map((coach) => {
             const { id, name, games, profileImg, imgAlt, description } = coach
@@ -44,13 +51,24 @@ const Team = () => {
 }
 
 const TeamWrapper = styled.main`
-  section {
+  header {
+    color: hsl(var(--clr-white));
+    text-align: center;
+    margin-bottom: 5rem;
+
     h2 {
-      color: hsl(var(--clr-white));
-      text-align: center;
-      font-size: 2rem;
+      margin-bottom: 1.8rem;
+      font-size: 2.6rem;
     }
 
+    p {
+      margin: 0 auto;
+      max-width: 80rem;
+      font-size: 1.6rem;
+    }
+  }
+  
+  section {
     .splide {
       margin: 0 auto;
       max-width: 90rem;
