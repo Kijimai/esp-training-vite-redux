@@ -72,10 +72,20 @@ export const teachings = [
 
 export const testimonialsList = [
   {
-    user: "Name Here",
     review:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, perferendis amet earum delectus quidem iusto laborum, iste quas voluptatibus dolorum, incidunt quo impedit rem deserunt.",
-    img: "",
+      "I booked a coaching session with Daiwik and I have to say it was the most improvement I've ever made in Apex in the span of one hour. He immediately identified my shortcomings as a player and helped me improve on them with insight I would never have known about just watching other pro players play the game. I'll definitely be looking forward ",
+  },
+  {
+    review:
+      "I booked a coaching session with Daiwik and I have to say it was the most improvement I've ever made in Apex in the span of one hour. He immediately identified my shortcomings as a player and helped me improve on them with insight I would never have known about just watching other pro players play the game. I'll definitely be looking forward ",
+  },
+  {
+    review:
+      "I booked a coaching session with Daiwik and I have to say it was the most improvement I've ever made in Apex in the span of one hour. He immediately identified my shortcomings as a player and helped me improve on them with insight I would never have known about just watching other pro players play the game. I'll definitely be looking forward ",
+  },
+  {
+    review:
+      "I booked a coaching session with Daiwik and I have to say it was the most improvement I've ever made in Apex in the span of one hour. He immediately identified my shortcomings as a player and helped me improve on them with insight I would never have known about just watching other pro players play the game. I'll definitely be looking forward ",
   },
 ]
 
