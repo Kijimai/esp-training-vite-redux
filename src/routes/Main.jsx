@@ -2,7 +2,11 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 import ctaImg from "../assets/images/cta-png.png"
 import { teachings } from "../links"
-
+import { coachSplash } from "../assets/images/images"
+import { Splide, SplideSlide } from "@splidejs/react-splide"
+import axios from "axios"
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa"
+import { testimonialsList } from "../links"
 // Api call to get randomized user portraits and names
 // https://randomuser.me/api/?results=5
 
@@ -37,16 +41,18 @@ const Main = () => {
         <h2>Our Coaches</h2>
         <div className="inner-coaches">
           <div className="left">
+            <h3>Team stats: </h3>
             <ul>
-              <li>
-                2000+ hours of Apex Legends playtime and other competitive FPS
-                games
-              </li>
               <li>Experience participating in ALGS and various tournaments</li>
-              <li>Customer Satisfaction rating of 4+ stars</li>
+              <li>
+                Consistently place above Masters and top 500 Apex Predator rank
+                every season
+              </li>
+              <li>Customer satisfaction rating of 4+ stars</li>
             </ul>
           </div>
           <div className="right">
+            <img src={coachSplash} alt="The legend trainer team" />
             <Link className="btn" to="team">
               Our Team
             </Link>
@@ -54,19 +60,6 @@ const Main = () => {
         </div>
       </section>
       {/* End of Checklist */}
-      {/* About Section */}
-      <section>
-        <h2>About Us</h2>
-        <p className="description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam pariatur
-          consectetur ad id architecto repudiandae optio nulla, adipisci,
-          accusamus, possimus ab laborum a omnis maxime magnam numquam quod.
-          Aliquid voluptas omnis repellendus laborum minus minima illo ad
-          blanditiis? Error illo molestias accusantium perspiciatis corrupti
-          ratione distinctio velit consectetur suscipit cupiditate?
-        </p>
-      </section>
-      {/* End of About Section */}
       {/* What is offered and taught */}
       <section className="teachings" id="teachings">
         <h2>What we teach</h2>
@@ -95,6 +88,7 @@ const Main = () => {
               specialize on one thing, and other more well-rounded for all types
               of scenarios in combat.
             </p>
+            <Link className="btn">Our Services</Link>
           </div>
         </div>
       </section>
@@ -104,6 +98,15 @@ const Main = () => {
       <section>
         <h2>What legends have said about us</h2>
         {/* Carousel here? */}
+        <Splide>
+          {testimonialsList.map((testimonial, idx) => {
+            return (
+              <SplideSlide key={idx}>
+                <p>{testimonial.review}</p>
+              </SplideSlide>
+            )
+          })}
+        </Splide>
       </section>
       {/* Testimonials End */}
     </MainWrapper>
@@ -114,9 +117,12 @@ const MainWrapper = styled.main`
   color: hsl(var(--clr-white));
 
   section {
+    margin-bottom: 4rem;
+
     h2 {
       text-align: center;
       font-size: 2.6rem;
+      margin-bottom: 4rem;
     }
 
     .description {
@@ -126,7 +132,7 @@ const MainWrapper = styled.main`
 
   .cta {
     display: grid;
-    grid-template-columns: minmax(30rem, 40rem) minmax(30rem, 1fr);
+    grid-template-columns: minmax(30rem, 50rem) minmax(30rem, 1fr);
 
     .left {
       display: flex;
@@ -137,10 +143,16 @@ const MainWrapper = styled.main`
       h2 {
         font-size: 3rem;
         text-align: center;
+        margin-bottom: 3rem;
       }
 
       p {
         font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .btn {
+        margin: 0 auto;
       }
     }
 
@@ -149,6 +161,39 @@ const MainWrapper = styled.main`
         display: block;
         width: 100%;
         filter: drop-shadow(0.5rem 0.6rem 0.1rem #4444dd);
+      }
+    }
+  }
+
+  /* Coaches Section */
+
+  .coaches {
+    .inner-coaches {
+      display: flex;
+      gap: 4rem;
+
+      .left {
+        h3 {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+        ul {
+          list-style: circle;
+          font-size: 1.8rem;
+        }
+      }
+
+      .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 100%;
+        }
+
+        a {
+        }
       }
     }
   }
@@ -169,6 +214,9 @@ const MainWrapper = styled.main`
     .right {
       align-self: center;
       order: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .teachings-container {
