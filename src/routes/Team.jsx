@@ -1,4 +1,3 @@
-import "@splidejs/react-splide/css"
 import { Splide, SplideSlide } from "@splidejs/react-splide"
 import styled from "styled-components"
 import { coachInfo } from "../links"
@@ -67,7 +66,7 @@ const TeamWrapper = styled.main`
       font-size: 1.6rem;
     }
   }
-  
+
   section {
     .splide {
       margin: 0 auto;
@@ -93,6 +92,7 @@ const TeamWrapper = styled.main`
       }
 
       .splide__slide {
+        border-top: 0.4rem solid red;
         display: grid;
         grid-template-columns: 40rem 1fr;
         .coach-profile {
