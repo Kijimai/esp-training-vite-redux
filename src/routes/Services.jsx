@@ -1,5 +1,7 @@
 import styled from "styled-components"
 import { servicesList } from "../links"
+import { Link } from "react-router-dom"
+import parse from "html-react-parser"
 
 const Services = () => {
   return (
@@ -21,7 +23,7 @@ const Services = () => {
               <h3>{title}</h3>
               <div className="content">
                 <aside>
-                  <p>{description}</p>
+                  <p>{parse(description)}</p>
                 </aside>
                 <div className="service-img">
                   <img src={imgLink} alt={title} />
@@ -30,12 +32,24 @@ const Services = () => {
             </div>
           )
         })}
+        <footer>
+          <p>
+            So... are you ready to become a <b>legend?</b>
+          </p>
+          <Link to="../purchase" className="btn">
+            View our Services
+          </Link>
+        </footer>
       </section>
     </ServicesWrapper>
   )
 }
 
 const ServicesWrapper = styled.main`
+  p {
+    font-size: 1.6rem;
+  }
+
   header {
     color: hsl(var(--clr-white));
     text-align: center;
@@ -49,7 +63,6 @@ const ServicesWrapper = styled.main`
     p {
       margin: 0 auto;
       max-width: 80rem;
-      font-size: 1.6rem;
     }
   }
 
@@ -62,6 +75,17 @@ const ServicesWrapper = styled.main`
       margin-bottom: 2rem;
     }
 
+    &:nth-child(2n + 1) {
+      .content {
+        aside {
+          order: 2;
+        }
+        .service-img {
+          order: 1;
+        }
+      }
+    }
+
     .content {
       display: flex;
       justify-content: center;
@@ -71,7 +95,6 @@ const ServicesWrapper = styled.main`
         max-width: 40rem;
         p {
           padding: 1rem;
-          font-size: 1.6rem;
         }
       }
 
@@ -86,6 +109,11 @@ const ServicesWrapper = styled.main`
         }
       }
     }
+  }
+
+  footer {
+    color: hsl(var(--clr-white));
+    text-align: center;
   }
 `
 
