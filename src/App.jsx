@@ -9,6 +9,7 @@ import {
   Team,
   Dashboard,
   PrivateRoute,
+  Error,
 } from "./routes/index"
 import Sidebar from "./components/navigator/Sidebar"
 import { useSelector } from "react-redux"
@@ -62,6 +63,7 @@ const App = () => {
                 </PrivateRoute>
               }
             />
+            <Route path="*" element={<Error />} />
           </Route>
         </Routes>
       </AuthWrapper>
