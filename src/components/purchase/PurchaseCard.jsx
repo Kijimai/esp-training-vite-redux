@@ -38,7 +38,7 @@ const PurchaseCard = ({
             // if (!user) {
             //   return
             // }
-            navigate(`:${userType}`)
+            navigate(`${userType}`)
           }}
         >
           Select
