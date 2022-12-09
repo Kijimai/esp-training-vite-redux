@@ -6,8 +6,8 @@ const UserContext = createContext()
 const UserProvider = ({ children }) => {
   const { loginWithRedirect, loginWithPopup, logout, user } = useAuth0()
   const [currentUser, setCurrentUser] = useState(null)
+  
   useEffect(() => {
-    console.log(user)
     setCurrentUser(user)
   }, [user])
 
