@@ -1,14 +1,20 @@
 import styled from "styled-components"
+import { useNavigate } from "react-router-dom"
 import { formatPrice } from "../../utils/helper"
 import { FaCheck } from "react-icons/fa"
+import { useUserContext } from "../../context/UserProvider"
+import { useAuth0 } from "@auth0/auth0-react"
+
 const PurchaseCard = ({
   title,
   cost,
   offers,
   bannerColor,
   userType,
-  purchaseLink,
 }) => {
+  const { user } = useAuth0()
+  const navigate = useNavigate()
+
   return (
     <CardWrapper>
       <header style={{ backgroundColor: bannerColor }}>
@@ -29,7 +35,10 @@ const PurchaseCard = ({
       <footer>
         <button
           onClick={() => {
-            window.open(purchaseLink, "_self")
+            // if (!user) {
+            //   return
+            // }
+            navigate(`:${userType}`)
           }}
         >
           Select
@@ -51,6 +60,11 @@ const CardWrapper = styled.article`
     padding: 1rem 1.5rem;
     text-align: center;
     font-size: 1.4rem;
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: 600px) {
+      margin-bottom: 1rem;
+    }
   }
 
   .offers-list {
