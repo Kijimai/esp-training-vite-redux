@@ -19,6 +19,7 @@ import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 // Splide Styling
 import "@splidejs/react-splide/css"
+import StripeCheckout from "./components/StripeCheckout"
 
 const App = () => {
   const { isShowing } = useSelector((state) => state.sidebar)
@@ -45,6 +46,14 @@ const App = () => {
             <Route path="team" element={<Team />} />
             <Route path="payment" element={<Payment />} />
             <Route path="purchase" element={<Purchase />} />
+            <Route
+              path="purchase/:plan"
+              element={
+                <PrivateRoute>
+                  <StripeCheckout />
+                </PrivateRoute>
+              }
+            />
             <Route
               path="dashboard"
               element={
