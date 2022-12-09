@@ -8,7 +8,7 @@ const Purchase = () => {
     <PurchaseWrapper>
       {/* Pricing Tiers Section */}
       <section className="services">
-        <header>
+        <header className="service-header">
           <h2>Our Services</h2>
           <p>
             Basic to Deluxe tier are on a per purchase basis. The MVP tier is a
@@ -28,7 +28,7 @@ const Purchase = () => {
 
 const PurchaseWrapper = styled.main`
   .services {
-    header {
+    .service-header {
       margin-bottom: 2rem;
       h2,
       p {
@@ -42,6 +42,10 @@ const PurchaseWrapper = styled.main`
         font-size: 1.6rem;
         max-width: 50rem;
         margin: 0 auto;
+      }
+
+      @media only screen and (max-width: 600px) {
+        margin-bottom: 5rem;
       }
     }
   }
@@ -63,6 +67,33 @@ const PurchaseWrapper = styled.main`
     }
     article:nth-child(4) {
       grid-column: 2/3;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      grid-template-columns: repeat(2, minmax(25rem, 1fr));
+      margin: 0 auto;
+
+      article:nth-child(1) {
+        grid-column: 1/2;
+      }
+      article:nth-child(2) {
+        grid-column: 2/3;
+      }
+      article:nth-child(3) {
+        grid-column: 1/2;
+      }
+      article:nth-child(4) {
+        grid-column: 2/3;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+
+      article {
+        min-width: 30rem;
+      }
     }
   }
 `
