@@ -5,13 +5,7 @@ import { FaCheck } from "react-icons/fa"
 import { useUserContext } from "../../context/UserProvider"
 import { useAuth0 } from "@auth0/auth0-react"
 
-const PurchaseCard = ({
-  title,
-  cost,
-  offers,
-  bannerColor,
-  userType,
-}) => {
+const PurchaseCard = ({ title, cost, offers, bannerColor, userType }) => {
   const { user } = useAuth0()
   const navigate = useNavigate()
 
@@ -35,9 +29,6 @@ const PurchaseCard = ({
       <footer>
         <button
           onClick={() => {
-            // if (!user) {
-            //   return
-            // }
             navigate(`${userType}`)
           }}
         >
