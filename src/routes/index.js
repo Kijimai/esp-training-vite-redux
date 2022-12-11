@@ -6,7 +6,7 @@ import Payment from "./Payment"
 import Services from "./Services"
 import Dashboard from "./Dashboard"
 import Team from "./Team"
-
+import Error from "./Error"
 export {
   Main,
   Content,
@@ -15,5 +15,6 @@ export {
   Payment,
   Services,
   Dashboard,
-  Team
+  Team,
+  Error,
 }
