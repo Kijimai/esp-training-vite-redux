@@ -9,18 +9,21 @@ import {
   CardCvcElement,
   CardExpiryElement,
   useStripe,
+  CardNumberElement,
 } from "@stripe/react-stripe-js"
+import Loading from "react-loading"
 import { useAuth0 } from "@auth0/auth0-react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import Error from "../routes/Error"
 import { purchaseTiers } from "../links"
+import axios from "axios"
+import { toast } from "react-toastify"
 const promise = loadStripe(import.meta.env.VITE_STRIPE_KEY)
 
 const CheckOutForm = () => {
   const { user } = useAuth0()
-  const stripe = useStripe()
-  const elements = useElements()
   const { plan } = useParams()
+  const navigate = useNavigate()
 
   // Stripe States
   const [succeeded, setSucceeded] = useState(false)
@@ -29,8 +32,19 @@ const CheckOutForm = () => {
   const [clientSecret, setClientSecret] = useState("")
   const [error, setError] = useState(null)
 
+  const stripe = useStripe()
+  const elements = useElements()
+
+  // Get current plan based on route
+  const currentPlan = purchaseTiers.find((tier) => tier.userType === plan)
+
   const createPaymentIntent = async () => {
     try {
+      const { data } = await axios.post(
+        "/.netlify/functions/create-payment-intent",
+        JSON.stringify({ cost: currentPlan.cost })
+      )
+      setClientSecret(data.clientSecret)
     } catch (err) {
       console.log(err.response)
     }
@@ -38,8 +52,59 @@ const CheckOutForm = () => {
   console.log(plan)
 
   useEffect(() => {
-    setClientSecret()
+    createPaymentIntent()
   }, [])
+
+  const cardStyle = {
+    style: {
+      base: {
+        color: "#32325d",
+        fontFamily: "Arial, sans-serif",
+        fontSmoothing: "antialiased",
+        fontSize: "16px",
+        "::placeholder": {
+          color: "#32325d",
+        },
+      },
+      invalid: {
+        color: "#fa755a",
+        iconColor: "#fa755a",
+      },
+    },
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    setProcessing(true)
+
+    const payload = await stripe.confirmCardPayment(clientSecret, {
+      payment_method: {
+        card: elements.getElement(CardElement),
+      },
+    })
+
+    if (payload.error) {
+      setError(`Payment failed: ${payload.error.message}`)
+      setProcessing(false)
+    } else {
+      setError(null)
+      setProcessing(false)
+      setSucceeded(true)
+      console.log(payload)
+      toast(
+        `Thank you for purchasing the ${plan} service! Redirecting to dashboard...`
+      )
+      setTimeout(() => {
+        navigate("../../dashboard")
+      }, 6000)
+    }
+  }
+
+  const handleChange = async (event) => {
+    // event.empty returns a boolean value to see if the input is empty or not -- the button will be disabled if the input is empty
+    setDisabled(event.empty)
+    setError(event.error ? event.error.message : "")
+  }
 
   if (
     plan !== "basic" &&
@@ -52,23 +117,53 @@ const CheckOutForm = () => {
 
   const { nickname } = user
 
-  // Get current plan based on route
-  const currentPlan = purchaseTiers.find((tier) => tier.userType === plan)
-
   return (
     <PlanWrapper>
-      <div className="left">
-        <h2>{nickname}</h2>
+      <article className="left">
+        <h2>Thanks for considering us, {nickname}!</h2>
+        <p>
+          You've chosen the <b>{plan}</b> plan which includes:{" "}
+        </p>
         <ul>
           {currentPlan.offers.map((offer, idx) => {
             return <li key={idx}>{offer}</li>
           })}
         </ul>
-      </div>
+      </article>
       <div className="right">
-        <form>
-          <CardElement />
-        </form>
+        {succeeded ? (
+          <div>
+            <h2>Thank you very much!</h2>
+            <p>You will be redirected shortly...</p>
+          </div>
+        ) : (
+          <form id="payment-form" onSubmit={handleSubmit}>
+            <p>Test Card Number: 4242 4242 4242 4242</p>
+            <CardElement
+              id="card-element"
+              onChange={handleChange}
+              options={cardStyle}
+            />
+            <button
+              className="payment-btn"
+              disabled={processing || disabled || succeeded}
+              id="submit"
+              onClick={handleSubmit}
+            >
+              {processing ? (
+                <Loading
+                  type="spin"
+                  color="lightblue"
+                  height={"3rem"}
+                  width={"3rem"}
+                />
+              ) : (
+                "Pay"
+              )}
+            </button>
+            <span className="display-error">{error}</span>
+          </form>
+        )}
       </div>
     </PlanWrapper>
   )
@@ -87,7 +182,49 @@ const StripeCheckout = () => {
 const PlanWrapper = styled.main`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 4rem;
   background-color: hsl(var(--clr-white));
+
+  .left {
+    p {
+      font-size: 1.6rem;
+    }
+
+    ul {
+      padding: 2rem;
+      font-size: 1.4rem;
+      list-style: circle;
+    }
+  }
+
+  .right {
+    background-color: hsl(var(--clr-off-white));
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem hsl(var(--clr-black));
+  }
+
+  .payment-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: hsl(var(--clr-lightblue));
+    color: hsl(var(--clr-white));
+    border: none;
+    transition: 0.2s ease color, 0.2s ease background-color;
+
+    &:hover {
+      background-color: hsl(var(--clr-orange));
+      color: hsl(var(--clr-white));
+    }
+  }
+
+  .display-error {
+    color: red;
+  }
 `
 
 const StripeWrapper = styled.aside``
