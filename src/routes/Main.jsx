@@ -6,7 +6,9 @@ import { coachSplash } from "../assets/images/images"
 import { Splide, SplideSlide } from "@splidejs/react-splide"
 import axios from "axios"
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa"
-import { testimonialsList } from "../links"
+import parse from "html-react-parser"
+import { testimonialsList, teamStats } from "../links"
+
 // Api call to get randomized user portraits and names
 // https://randomuser.me/api/?results=5
 
@@ -43,12 +45,9 @@ const Main = () => {
           <div className="left">
             <h3>Team stats: </h3>
             <ul>
-              <li>Experience participating in ALGS and various tournaments</li>
-              <li>
-                Consistently place above Masters and top 500 Apex Predator rank
-                every season
-              </li>
-              <li>Customer satisfaction rating of 4+ stars</li>
+              {teamStats.map((stat, idx) => {
+                return <li key={idx}>{stat}</li>
+              })}
             </ul>
           </div>
           <div className="right">
@@ -85,8 +84,8 @@ const Main = () => {
               Our coaches and trainers are at the top of their game, with every
               single day devoted to consistent improvement and investment
               towards the betterment of our mentees. We have coaches that
-              specialize on one thing, and other more well-rounded for all types
-              of scenarios in combat.
+              specialize on one thing, with others being more well-rounded for
+              all types of scenarios in combat.
             </p>
             <Link className="btn">Our Services</Link>
           </div>
@@ -95,14 +94,31 @@ const Main = () => {
       {/* End of Services offered */}
 
       {/* Testimonials Section Start */}
-      <section>
+      <section className="testimonials">
         <h2>What legends have said about us</h2>
-        {/* Carousel here? */}
-        <Splide>
+        <Splide
+          options={{
+            drag: false,
+            autoplay: true,
+            type: "loop",
+            interval: 8000,
+            pauseOnHover: true,
+            pauseOnFocus: true,
+            pagination: false
+          }}
+        >
           {testimonialsList.map((testimonial, idx) => {
+            const { review, user } = testimonial
             return (
               <SplideSlide key={idx}>
-                <p>{testimonial.review}</p>
+                <div className="testimonial">
+                  <div className="quote">
+                    <FaQuoteLeft />
+                    <p>{parse(review)}</p>
+                    <FaQuoteRight />
+                  </div>
+                  <p className="user">- {user}</p>
+                </div>
               </SplideSlide>
             )
           })}
@@ -117,16 +133,16 @@ const MainWrapper = styled.main`
   color: hsl(var(--clr-white));
 
   section {
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
 
     h2 {
       text-align: center;
-      font-size: 2.6rem;
+      font-size: 4rem;
       margin-bottom: 4rem;
     }
 
     .description {
-      font-size: 1.5rem;
+      font-size: 2.6rem;
     }
   }
 
@@ -141,13 +157,14 @@ const MainWrapper = styled.main`
       align-items: flex-start;
 
       h2 {
-        font-size: 3rem;
+        font-size: 5rem;
         text-align: center;
         margin-bottom: 3rem;
+        line-height: 1.2;
       }
 
       p {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-bottom: 2rem;
       }
 
@@ -174,12 +191,12 @@ const MainWrapper = styled.main`
 
       .left {
         h3 {
-          font-size: 2rem;
+          font-size: 3rem;
           margin-bottom: 1rem;
         }
         ul {
           list-style: circle;
-          font-size: 1.8rem;
+          font-size: 2.2rem;
         }
       }
 
@@ -205,6 +222,8 @@ const MainWrapper = styled.main`
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
+      justify-items: center;
+      gap: 1rem;
     }
 
     .left {
@@ -297,6 +316,61 @@ const MainWrapper = styled.main`
         :nth-child(5) {
           grid-column: 3 / 4;
           grid-row: 3 / 4;
+        }
+      }
+    }
+  }
+
+  .testimonials {
+    .splide {
+      margin: 0 auto;
+      max-width: 90rem;
+      background-color: hsl(var(--clr-off-white));
+
+      .splide__arrow {
+        width: 5rem;
+        height: 5rem;
+        opacity: 1;
+
+        &:disabled {
+          opacity: 0.3;
+        }
+
+        &--prev {
+          left: -6rem;
+        }
+
+        &--next {
+          right: -6rem;
+        }
+      }
+
+      .splide__slide {
+        border-top: 0.4rem solid red;
+
+        .testimonial {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          padding: 3rem;
+
+          .quote {
+            display: flex;
+          }
+
+          .user {
+            text-align: right;
+          }
+
+          svg {
+            color: black;
+            width: 8rem;
+          }
+
+          p {
+            color: hsl(var(--clr-black));
+            font-size: 1.6rem;
+          }
         }
       }
     }
