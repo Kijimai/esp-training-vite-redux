@@ -8,7 +8,7 @@ const NavUserControls = () => {
   return (
     <NavUserControlsWrapper>
       {user && (
-        <Link to="dashboard">
+        <Link className="dashboard-link" to="dashboard">
           <h3>Welcome, {user.nickname}</h3>
         </Link>
       )}
@@ -26,9 +26,21 @@ const NavUserControlsWrapper = styled.div`
   display: flex;
   gap: 1.4rem;
 
-  h3 {
-    color: hsl(var(--clr-white));
-    font-family: "Open Sans", sans-serif;
+  .dashboard-link {
+    display: flex;
+    align-items: center;
+
+    h3 {
+      color: hsl(var(--clr-white));
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.4rem;
+    }
+
+    &:hover {
+      h3 {
+        color: hsl(var(--clr-lightblue));
+      }
+    }
   }
 
   button {
