@@ -18,6 +18,7 @@ import Error from "../routes/Error"
 import { purchaseTiers } from "../links"
 import axios from "axios"
 import { toast } from "react-toastify"
+
 const promise = loadStripe(import.meta.env.VITE_STRIPE_KEY)
 
 const CheckOutForm = () => {
@@ -42,14 +43,14 @@ const CheckOutForm = () => {
     try {
       const { data } = await axios.post(
         "/.netlify/functions/create-payment-intent",
-        JSON.stringify({ cost: currentPlan.cost })
+        JSON.stringify({ cost: currentPlan.cost, email: user.email })
       )
+
       setClientSecret(data.clientSecret)
     } catch (err) {
       console.log(err.response)
     }
   }
-  console.log(plan)
 
   useEffect(() => {
     createPaymentIntent()
@@ -90,7 +91,6 @@ const CheckOutForm = () => {
       setError(null)
       setProcessing(false)
       setSucceeded(true)
-      console.log(payload)
       toast(
         `Thank you for purchasing the ${plan} service! Redirecting to dashboard...`
       )
@@ -179,7 +179,8 @@ const StripeCheckout = () => {
   )
 }
 
-const PlanWrapper = styled.main`
+const PlanWrapper = styled.section`
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 4rem;
@@ -227,6 +228,8 @@ const PlanWrapper = styled.main`
   }
 `
 
-const StripeWrapper = styled.aside``
+const StripeWrapper = styled.main`
+  min-height: 60vh;
+`
 
 export default StripeCheckout
