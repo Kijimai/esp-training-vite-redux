@@ -70,6 +70,7 @@ const TeamWrapper = styled.main`
   section {
     .splide {
       margin: 0 auto;
+      margin-bottom: 9rem;
       max-width: 90rem;
 
       .splide__arrow {
