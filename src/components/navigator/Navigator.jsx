@@ -10,6 +10,7 @@ import Logo from "../../assets/icons/Logo"
 
 const Navigator = () => {
   const dispatch = useDispatch()
+
   return (
     <NavWrapper>
       <nav>
@@ -65,7 +66,7 @@ const NavWrapper = styled.header`
 
   nav {
     display: grid;
-    grid-template-columns: 12rem 1fr 12rem;
+    grid-template-columns: 12rem 1fr minmax(12rem, auto);
     justify-content: flex-start;
     align-items: center;
 
