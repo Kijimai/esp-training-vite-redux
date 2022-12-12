@@ -8,7 +8,7 @@
 
   --clr-q-blue: 201 62% 58%;
   --clr-q-purple: 291 57% 50%;
-  --clr-q-yellow: 49 72% 47%;
+  --clr-q-yellow: 49 72% 50%;
   --clr-q-red: 0 87% 56%;
 }
 
@@ -30,7 +30,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: 100%;
+  min-height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  width: 2rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: hsl(var(--clr-black));
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--clr-lightblue));
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--clr-white));
 }
 
 code {
