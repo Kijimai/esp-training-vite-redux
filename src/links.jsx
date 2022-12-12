@@ -73,20 +73,31 @@ export const teachings = [
 export const testimonialsList = [
   {
     review:
-      "I booked a coaching session with Daiwik and I have to say it was the most improvement I've ever made in Apex in the span of one hour. He immediately identified my shortcomings as a player and helped me improve on them with insight I would never have known about just watching other pro players play the game. I'll definitely be looking forward ",
+      "I booked a coaching session with <b>Daiwik</b> and I have to say it was the most improvement I've ever made in Apex in the span of one hour. He immediately identified my shortcomings as a player and helped me improve on them with insight I would never have known about just watching other pro players play the game. I'll definitely be looking forward to more enlightening sessions in the near future.",
+    user: "Matt Y.",
   },
   {
     review:
-      "I booked a coaching session with Daiwik and I have to say it was the most improvement I've ever made in Apex in the span of one hour. He immediately identified my shortcomings as a player and helped me improve on them with insight I would never have known about just watching other pro players play the game. I'll definitely be looking forward ",
+      "I was very lucky to have <b>Arnold</b> as my coach in multiple coacing sessions. After being in diamond rank for so long, I finally reached Masters rank by using everything he taught me about team composition and positioning. I've always been able to aim pretty well in my fps gaming history, but Apex Legends is a different beast altogether when it comes to teamwork and luck. Minimizing bad luck is the side effect from learning from the best like Arnold.",
+    user: "Chad S.",
   },
   {
     review:
-      "I booked a coaching session with Daiwik and I have to say it was the most improvement I've ever made in Apex in the span of one hour. He immediately identified my shortcomings as a player and helped me improve on them with insight I would never have known about just watching other pro players play the game. I'll definitely be looking forward ",
+      "<b>James</b> and <b>Steve</b> are both beasts!! I booked an MVP package with them as my coaches, and they are THE MOST knowledgeable and skillful players I've ever had the pleasure of playing with. They were able to help me reach Predator in Season 11 with the new map addition of Storm Point. Now with the current season, I'll be trying to reach that height on my own and make use of everything they taught me.",
+    user: "Curtis B.",
   },
   {
     review:
-      "I booked a coaching session with Daiwik and I have to say it was the most improvement I've ever made in Apex in the span of one hour. He immediately identified my shortcomings as a player and helped me improve on them with insight I would never have known about just watching other pro players play the game. I'll definitely be looking forward ",
+      "In-Freakin-credible is the word I would use to describe <b>Günter 'Wünderbar' König</b>. One of the most gifted movement players I've ever spectated in Apex Legends, his deep knowledge of the game's mechanics explained in ways I could easily understand helped propel me forward from Diamond to high Masters. To this day I still use the techniques he taught me and it has helped carry me through many ranked games with ease.",
+    user: "Jeff F.",
   },
+]
+
+export const teamStats = [
+  "Experience participating in ALGS and various tournaments",
+  "Consistently place above Masters and top 500 Apex Predator rank every season",
+  "Customer satisfaction rating of 4+ stars",
+  "Diverse list of backgrounds in games within a competitive setting.",
 ]
 
 export const purchaseTiers = [
@@ -144,7 +155,7 @@ export const coachInfo = [
       "CS: Global Offensive",
       "Overwatch",
       "Fortnite",
-      "Super Smash Melee",
+      "Smash Bros. Melee",
     ],
     profileImg: coach1,
     imgAlt: "James 'xXAimbotXx' Brooks",
@@ -224,7 +235,7 @@ export const servicesList = [
   {
     title: "Movement Techniques",
     description:
-      "From tap and lurch strafing, to wall bounces, we will teach you how to perform the forbidden techniques of movement so you can dominate any fight while helping you stay alive and hard to hit. We can suggest optimal keybinds to fit your personal playstyle. Everyone knows movement is the secret ingredient to becoming an <b>Apex Predator</b>.",
+      "From tap and lurch strafing, to wall bounces, we will teach you how to perform deadly techniques in movement so you can dominate any fight while helping you stay alive and hard to hit. We can suggest optimal keybinds to fit your personal playstyle. Everyone knows movement is the secret ingredient to becoming an <b>Apex Predator</b>.",
     imgLink:
       "https://media4.giphy.com/media/CMm2c7Gqd8UVB5VkCQ/giphy.gif?cid=ecf05e479ep09i6j3yyxm43uaz3joxna7o3uknf03liazurb&rid=giphy.gif&ct=g",
   },
