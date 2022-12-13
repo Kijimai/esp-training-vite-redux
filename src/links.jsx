@@ -6,6 +6,9 @@ import {
   FaArrowsAlt,
   FaCrosshairs,
 } from "react-icons/fa"
+
+import { BsTwitch, BsTwitter } from "react-icons/bs"
+
 import {
   coach1,
   coach2,
@@ -161,6 +164,10 @@ export const coachInfo = [
     imgAlt: "James 'xXAimbotXx' Brooks",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas in similique aliquid tempora officiis, quam accusamus expedita, ea necessitatibus blanditiis iste eius nam cum voluptatibus minus natus aspernatur reiciendis illum eos perspiciatis assumenda.",
+    socials: [
+      { url: "https://twitter.com/", icon: <BsTwitter /> },
+      { url: "https://twitch.com/", icon: <BsTwitch /> },
+    ],
   },
   {
     id: 2,
@@ -177,6 +184,10 @@ export const coachInfo = [
     imgAlt: "Arnold 'SunTzu' Tang",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas in similique aliquid tempora officiis, quam accusamus expedita, ea necessitatibus blanditiis iste eius nam cum voluptatibus minus natus aspernatur reiciendis illum eos perspiciatis assumenda.",
+    socials: [
+      { url: "https://twitter.com/", icon: <BsTwitter /> },
+      { url: "https://twitch.com/", icon: <BsTwitch /> },
+    ],
   },
   {
     id: 3,
@@ -192,6 +203,10 @@ export const coachInfo = [
     imgAlt: "Name 'DrawinBlanks' Here",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas in similique aliquid tempora officiis, quam accusamus expedita, ea necessitatibus blanditiis iste eius nam cum voluptatibus minus natus aspernatur reiciendis illum eos perspiciatis assumenda.",
+    socials: [
+      { url: "https://twitter.com/", icon: <BsTwitter /> },
+      { url: "https://twitch.com/", icon: <BsTwitch /> },
+    ],
   },
   {
     id: 4,
@@ -201,6 +216,10 @@ export const coachInfo = [
     imgAlt: "Si-woo 'NoCap' Kim",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas in similique aliquid tempora officiis, quam accusamus expedita, ea necessitatibus blanditiis iste eius nam cum voluptatibus minus natus aspernatur reiciendis illum eos perspiciatis assumenda.",
+    socials: [
+      { url: "https://twitter.com/", icon: <BsTwitter /> },
+      { url: "https://twitch.com/", icon: <BsTwitch /> },
+    ],
   },
   {
     id: 5,
@@ -210,6 +229,10 @@ export const coachInfo = [
     imgAlt: "Daiwik 'KaiserKing' Dhar",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas in similique aliquid tempora officiis, quam accusamus expedita, ea necessitatibus blanditiis iste eius nam cum voluptatibus minus natus aspernatur reiciendis illum eos perspiciatis assumenda.",
+    socials: [
+      { url: "https://twitter.com/", icon: <BsTwitter /> },
+      { url: "https://twitch.com/", icon: <BsTwitch /> },
+    ],
   },
   {
     id: 6,
@@ -219,6 +242,10 @@ export const coachInfo = [
     imgAlt: "Geoff 'Nameless_wind' Smith",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas in similique aliquid tempora officiis, quam accusamus expedita, ea necessitatibus blanditiis iste eius nam cum voluptatibus minus natus aspernatur reiciendis illum eos perspiciatis assumenda.",
+    socials: [
+      { url: "https://twitter.com/", icon: <BsTwitter /> },
+      { url: "https://twitch.com/", icon: <BsTwitch /> },
+    ],
   },
   {
     id: 7,
@@ -228,6 +255,10 @@ export const coachInfo = [
     imgAlt: "Günter 'Wünderbar' König",
     description:
       "Gaming was not his original passion. He found his calling after visiting a local internet cafe and witnessing a tournament unfold before his eyes. After witnessing a victory, that was the moment he wanted a taste of it for himself. Since then he has dedicated his entire gaming career to be the best at what he plays.",
+    socials: [
+      { url: "https://twitter.com/", icon: <BsTwitter /> },
+      { url: "https://twitch.com/", icon: <BsTwitch /> },
+    ],
   },
 ]
 
