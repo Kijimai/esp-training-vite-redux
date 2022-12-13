@@ -25,7 +25,15 @@ const Team = () => {
       <section>
         <Splide options={splideOptions}>
           {coachInfo.map((coach) => {
-            const { id, name, games, profileImg, imgAlt, description } = coach
+            const {
+              id,
+              name,
+              games,
+              profileImg,
+              imgAlt,
+              description,
+              socials,
+            } = coach
             return (
               <SplideSlide key={id}>
                 <div className="coach-profile">
@@ -34,6 +42,21 @@ const Team = () => {
                   <ul className="games-list">
                     {games.map((game, idx) => {
                       return <li key={idx}>{game}</li>
+                    })}
+                  </ul>
+                  <ul className="socials-list">
+                    {socials.map((social, idx) => {
+                      return (
+                        <li className="social-item" key={idx}>
+                          <a
+                            href={social.url}
+                            rel="noreferrer noopener"
+                            target="_blank"
+                          >
+                            {social.icon}
+                          </a>
+                        </li>
+                      )
                     })}
                   </ul>
                 </div>
@@ -120,6 +143,21 @@ const TeamWrapper = styled.main`
               color: hsl(var(--clr-white));
               border-radius: 0.6rem;
               font-size: 1.4rem;
+            }
+          }
+
+          .socials-list {
+            display: flex;
+            justify-content: flex-end;
+            gap: 2rem;
+            margin: 2rem 0;
+
+            svg {
+              width: 3rem;
+              height: 3rem;
+            }
+            a {
+              color: red;
             }
           }
         }
