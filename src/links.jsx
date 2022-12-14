@@ -17,6 +17,13 @@ import {
   coach5,
   coach6,
   coach7,
+  coach1avatar,
+  coach2avatar,
+  coach3avatar,
+  coach4avatar,
+  coach5avatar,
+  coach6avatar,
+  coach7avatar,
 } from "./assets/images/images"
 
 export const navLinks = [
@@ -161,6 +168,7 @@ export const coachInfo = [
       "Smash Bros. Melee",
     ],
     profileImg: coach1,
+    avatar: coach1avatar,
     imgAlt: "James 'xXAimbotXx' Brooks",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas in similique aliquid tempora officiis, quam accusamus expedita, ea necessitatibus blanditiis iste eius nam cum voluptatibus minus natus aspernatur reiciendis illum eos perspiciatis assumenda.",
@@ -168,6 +176,7 @@ export const coachInfo = [
       { url: "https://twitter.com/", icon: <BsTwitter /> },
       { url: "https://twitch.com/", icon: <BsTwitch /> },
     ],
+    isAvailable: true,
   },
   {
     id: 2,
@@ -181,6 +190,7 @@ export const coachInfo = [
       "Tekken 7",
     ],
     profileImg: coach2,
+    avatar: coach2avatar,
     imgAlt: "Arnold 'SunTzu' Tang",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas in similique aliquid tempora officiis, quam accusamus expedita, ea necessitatibus blanditiis iste eius nam cum voluptatibus minus natus aspernatur reiciendis illum eos perspiciatis assumenda.",
@@ -188,6 +198,7 @@ export const coachInfo = [
       { url: "https://twitter.com/", icon: <BsTwitter /> },
       { url: "https://twitch.com/", icon: <BsTwitch /> },
     ],
+    isAvailable: true,
   },
   {
     id: 3,
@@ -200,6 +211,7 @@ export const coachInfo = [
       "Smite",
     ],
     profileImg: coach3,
+    avatar: coach3avatar,
     imgAlt: "Name 'DrawinBlanks' Here",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas in similique aliquid tempora officiis, quam accusamus expedita, ea necessitatibus blanditiis iste eius nam cum voluptatibus minus natus aspernatur reiciendis illum eos perspiciatis assumenda.",
@@ -207,12 +219,14 @@ export const coachInfo = [
       { url: "https://twitter.com/", icon: <BsTwitter /> },
       { url: "https://twitch.com/", icon: <BsTwitch /> },
     ],
+    isAvailable: true,
   },
   {
     id: 4,
     name: "Si-woo 'NoCap' Kim",
     games: ["Apex Legends", "League of Legends", "Modern Warfare 2"],
     profileImg: coach4,
+    avatar: coach4avatar,
     imgAlt: "Si-woo 'NoCap' Kim",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas in similique aliquid tempora officiis, quam accusamus expedita, ea necessitatibus blanditiis iste eius nam cum voluptatibus minus natus aspernatur reiciendis illum eos perspiciatis assumenda.",
@@ -220,12 +234,14 @@ export const coachInfo = [
       { url: "https://twitter.com/", icon: <BsTwitter /> },
       { url: "https://twitch.com/", icon: <BsTwitch /> },
     ],
+    isAvailable: false,
   },
   {
     id: 5,
     name: "Daiwik 'KaiserKing' Dhar",
     games: ["Apex Legends", "Apex Legends Mobile", "Titanfall 2"],
     profileImg: coach5,
+    avatar: coach5avatar,
     imgAlt: "Daiwik 'KaiserKing' Dhar",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas in similique aliquid tempora officiis, quam accusamus expedita, ea necessitatibus blanditiis iste eius nam cum voluptatibus minus natus aspernatur reiciendis illum eos perspiciatis assumenda.",
@@ -233,12 +249,14 @@ export const coachInfo = [
       { url: "https://twitter.com/", icon: <BsTwitter /> },
       { url: "https://twitch.com/", icon: <BsTwitch /> },
     ],
+    isAvailable: true,
   },
   {
     id: 6,
     name: "Geoff 'Nameless_wind' Smith",
     games: ["Apex Legends", "Rainbow 6 Siege", "Modern Warfare 2"],
     profileImg: coach6,
+    avatar: coach6avatar,
     imgAlt: "Geoff 'Nameless_wind' Smith",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas in similique aliquid tempora officiis, quam accusamus expedita, ea necessitatibus blanditiis iste eius nam cum voluptatibus minus natus aspernatur reiciendis illum eos perspiciatis assumenda.",
@@ -246,12 +264,14 @@ export const coachInfo = [
       { url: "https://twitter.com/", icon: <BsTwitter /> },
       { url: "https://twitch.com/", icon: <BsTwitch /> },
     ],
+    isAvailable: true,
   },
   {
     id: 7,
     name: "Günter 'Wünderbar' König",
     games: ["Apex Legends", "Halo Infinite", "H1Z1"],
     profileImg: coach7,
+    avatar: coach7avatar,
     imgAlt: "Günter 'Wünderbar' König",
     description:
       "Gaming was not his original passion. He found his calling after visiting a local internet cafe and witnessing a tournament unfold before his eyes. After witnessing a victory, that was the moment he wanted a taste of it for himself. Since then he has dedicated his entire gaming career to be the best at what he plays.",
@@ -259,6 +279,7 @@ export const coachInfo = [
       { url: "https://twitter.com/", icon: <BsTwitter /> },
       { url: "https://twitch.com/", icon: <BsTwitch /> },
     ],
+    isAvailable: false,
   },
 ]
 

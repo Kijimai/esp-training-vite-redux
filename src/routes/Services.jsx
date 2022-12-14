@@ -92,6 +92,8 @@ const ServicesWrapper = styled.main`
       gap: 2rem;
 
       aside {
+        display: flex;
+        align-items: center;
         max-width: 40rem;
         p {
           padding: 1rem;
