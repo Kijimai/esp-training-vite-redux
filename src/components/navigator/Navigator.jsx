@@ -7,7 +7,7 @@ import { showSidebar } from "../../features/sidebar/sidebarSlice"
 import NavUserControls from "./NavUserControls"
 import NavOpen from "../../assets/icons/NavOpen"
 import Logo from "../../assets/icons/Logo"
-
+import LogoWhite from "../../assets/icons/LogoWhite"
 const Navigator = () => {
   const dispatch = useDispatch()
 
@@ -15,8 +15,7 @@ const Navigator = () => {
     <NavWrapper>
       <nav>
         <Link className="site-logo" to="/">
-          <Logo />
-          <h1>Legend Trainer</h1>
+          <LogoWhite />
         </Link>
         <ul className="nav-links">
           {navLinks.map((link, idx) => {
@@ -82,6 +81,11 @@ const NavWrapper = styled.header`
 
     .site-logo {
       grid-column: 1 / 2;
+
+      svg {
+        height: 100%;
+        width: 10rem;
+      }
     }
 
     .nav-links {
